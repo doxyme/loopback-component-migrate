@@ -1,8 +1,9 @@
 module.exports = {
-  up: function(dataSource, next) {
-    next();
+  up: function(app, next) {
+    const QUERY = '';
+    app.dataSources.main.connector.query(QUERY, next);
   },
-  down: function(dataSource, next) {
+  down: function(app, next) {
     next();
   }
 };
